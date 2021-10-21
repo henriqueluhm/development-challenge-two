@@ -31,16 +31,41 @@ export const Table = () => {
 
   const columns = [
     { title: 'Id',         field: 'id', editable: false},
-    { title: 'Name',       field: 'name', validate: rowData => rowData.name === '' ? { isValid: false, helperText: 'Name is required'} : true },
-    { title: 'Birthdate',  field: 'birthdate', validate: rowData => rowData.birthdate === '' ? { isValid: false, helperText: 'Birthdate is required'} : true },
-    { title: 'Email',      field: 'email', validate: rowData => rowData.email === '' ? { isValid: false, helperText: 'Email is required'} : true },
-    { title: 'Address',    field: 'address', validate: rowData => rowData.address === '' ? { isValid: false, helperText: 'Address is required'} : true }
+    { title: 'Name',       field: 'name', validate: rowData => {
+      if (rowData.name === undefined || rowData.name === "") {
+        return 'Name is required.';
+      } else {
+        return true;
+      }
+    }},
+    { title: 'Birthdate',  field: 'birthdate', validate: rowData => {
+      if (rowData.birthdate === undefined || rowData.birthdate === "") {
+        return 'Birthdate is required.';
+      } else {
+        return true;
+      }
+    }},
+    { title: 'Email',      field: 'email', validate: rowData => {
+      if (rowData.email === undefined || rowData.email === "") {
+        return 'Email is required.';
+      } else if (!rowData.email.includes('@' && '.')) {
+        return "Invalid email format.";
+      } else {
+        return true;
+      }
+    } },
+    { title: 'Address',    field: 'address', validate: rowData => {
+      if (rowData.address === undefined || rowData.address === "") {
+        return 'Address is required.';
+      } else {
+        return true
+      }
+    }}
   ]
 
   const handleKey = (e) => {
     if (e.key === 'Enter') {
-      e.preventDefault();
-      alert("E P")
+      window.location.reload();
     }
   }
 
