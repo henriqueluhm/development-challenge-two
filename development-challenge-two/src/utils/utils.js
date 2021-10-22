@@ -1,3 +1,7 @@
+import HomeIcon from '@mui/icons-material/Home';
+import SettingsIcon from '@mui/icons-material/Settings';
+import InfoIcon from '@mui/icons-material/Info';
+
 export function generateRandomid(length) {
   let result = '';
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -7,3 +11,24 @@ export function generateRandomid(length) {
   }
  return result;
 }
+
+export const SidebarData = [
+  {
+    title: 'Home',
+    path: '/',
+    icon: <HomeIcon />,
+    className: 'nav-text'
+  },
+  {
+    title: 'Settings',
+    path: '/',
+    icon: <SettingsIcon />,
+    className: 'nav-text'
+  },
+  {
+    title: 'About',
+    path: '/',
+    icon: <InfoIcon />,
+    className: 'nav-text'
+  },
+]

@@ -13,5 +13,6 @@ export const updatePatient = async ({PatientID, data}) => {
 }
 
 export const deletePatient = async (event) => {
-  return await api.delete(`Dev/${event}`).then(({ data }) => data)
+  return await api.delete(`Dev/${event}`)
+    .then(({ data }) => data)
 }

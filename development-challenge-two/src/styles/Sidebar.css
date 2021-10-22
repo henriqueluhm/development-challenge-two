@@ -1,0 +1,91 @@
+.navbar {
+  background-color: #0288d1;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .8);
+}
+
+.inside-navbar {
+  display: flex;
+}
+
+.hamburguer {
+  padding: 12px 0 0 12px;
+}
+
+.acc:hover {
+  cursor: pointer;
+}
+
+h1 {
+  padding-left: 16px;
+  color: white;
+}
+
+.menu-bars {
+  margin-left: 2rem;
+  font-size: 2rem;
+  background: none;
+}
+
+.nav-menu {
+  background-color: #0288d1;
+  width: 210px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+}
+
+.nav-menu.active {
+  left: 0;
+  transition: 350ms;
+}
+
+.nav-text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  pad: 8px 0p 8px 16px;
+  list-style: none;
+  height: 60px;
+}
+
+.nav-text a {
+  text-decoration: none;
+  color: #e3f2fd;
+  font-size: 18px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
+  transition: 0.1s ease-in-out;
+}
+
+.nav-text a:hover {
+  opacity: .6;
+}
+
+.nav-menu-items {
+  width: 100%;
+}
+
+.navbar-toggle {
+  background-color: #0288d1;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+span {
+  margin-left: 16px;
+}
