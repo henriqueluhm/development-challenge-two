@@ -5,9 +5,9 @@ const useStyles = makeStyles((theme) => ({
     minWidth: 550,
   },
   tableContainer: {
-    borderRadius: 0,
-    margin: '25px 1px 1px 227px',
-    minWidth: 1600,
+    borderRadius: 5,
+    margin: '25px 1px 1px 240px',
+    minWidth: 650,
     maxWidth: 1600
   },
   tableHeaderCell: {
@@ -28,14 +28,14 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 14,
     color: 'white',
     borderRadius: 5,
-    marginLeft: 215, 
+    marginLeft: 240, 
     padding: '9px 16px',
     marginTop: 18,
     boxShadow: '1px 1px 1px 1px rgba(0 , 0, 0, .1)'
   },
   newPatientButton: {
     marginTop: 16,
-    marginRight: 32,
+    marginRight: 40,
     boxShadow: '1px 1px 1px 1px rgba(0 , 0, 0, .1)'
   }
 }));

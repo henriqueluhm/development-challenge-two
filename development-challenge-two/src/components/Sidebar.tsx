@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SidebarData } from '../utils/utils';
 
@@ -36,7 +36,6 @@ export const Sidebar = () => {
             return (
               <li key={index} className={link.className}>
                 <Link to={link.path}>
-                  {link.icon}
                   <span>{link.title}</span>
                 </Link>
               </li>

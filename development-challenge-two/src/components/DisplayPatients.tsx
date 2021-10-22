@@ -17,10 +17,11 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 import { getPatients, deletePatient } from '../services/patients/patients';
+import { Patient } from '../utils/types';
 
 export const DisplayPatients = () => {
   const classes = useStyles();
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<Patient[]>([]);
 
   useEffect(() => {
     getPatients()

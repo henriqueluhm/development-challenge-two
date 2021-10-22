@@ -10,11 +10,12 @@
 body {
   background: #eee;
   color: #212121;
+  position: relative;
 }
 
 body, input, button {
   font-family: 'Roboto', sans-serif;
-  font-size: 18px
+  font-size: 18px;
 }
 
 h1, h2, h3, h4, h5, h6, strong {
@@ -23,6 +24,15 @@ h1, h2, h3, h4, h5, h6, strong {
 
 button {
   cursor: pointer;
+}
+
+.blue-side {
+  background: #0288d1;
+  width: 210px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: -3;
 }
 
 button:hover {

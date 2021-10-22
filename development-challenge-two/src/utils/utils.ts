@@ -1,8 +1,6 @@
-import HomeIcon from '@mui/icons-material/Home';
-import SettingsIcon from '@mui/icons-material/Settings';
-import InfoIcon from '@mui/icons-material/Info';
+import { SidebarType } from './types';
 
-export function generateRandomid(length) {
+export function generateRandomid(length: number) {
   let result = '';
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   const charactersLength = characters.length;
@@ -12,23 +10,20 @@ export function generateRandomid(length) {
  return result;
 }
 
-export const SidebarData = [
+export const SidebarData: SidebarType[] = [
   {
     title: 'Home',
     path: '/',
-    icon: <HomeIcon />,
     className: 'nav-text'
   },
   {
     title: 'Settings',
     path: '/',
-    icon: <SettingsIcon />,
     className: 'nav-text'
   },
   {
     title: 'About',
     path: '/',
-    icon: <InfoIcon />,
     className: 'nav-text'
   },
 ]

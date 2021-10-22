@@ -4,11 +4,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0 2px rgba(0, 0, 0, .8);
 }
 
 .inside-navbar {
+  padding-top: 15px;
   display: flex;
+  height: 80px;
 }
 
 .hamburguer {
@@ -40,6 +41,7 @@ h1 {
   top: 0;
   left: -100%;
   transition: 850ms;
+  
 }
 
 .nav-menu.active {
@@ -54,6 +56,7 @@ h1 {
   pad: 8px 0p 8px 16px;
   list-style: none;
   height: 60px;
+  
 }
 
 .nav-text a {
@@ -75,6 +78,7 @@ h1 {
 
 .nav-menu-items {
   width: 100%;
+  
 }
 
 .navbar-toggle {
