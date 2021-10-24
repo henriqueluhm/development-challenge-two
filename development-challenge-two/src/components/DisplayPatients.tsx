@@ -73,10 +73,12 @@ export const DisplayPatients = () => {
                 <TableCell className={classes.tablecell}>{patient.email}</TableCell>
                 <TableCell className={classes.tablecell}>{patient.address}</TableCell>
                 <TableCell align="center">
-                <DeleteDialog patientId={patient.id} patientName={patient.name} patientBirthdate={patient.birthdate} patientEmail={patient.email} patientAdress={patient.address}></DeleteDialog>  
-                <EditDialog>
-                  <EditPatientForm patientId={patient.id} patientName={patient.name} patientBirthdate={patient.birthdate} patientEmail={patient.email} patientAdress={patient.address}/>
-                </EditDialog>
+                <div style={{display: 'flex', justifyContent: 'center'}}>
+                  <DeleteDialog patientId={patient.id} patientName={patient.name} patientBirthdate={patient.birthdate} patientEmail={patient.email} patientAdress={patient.address}></DeleteDialog>  
+                  <EditDialog>
+                    <EditPatientForm patientId={patient.id} patientName={patient.name} patientBirthdate={patient.birthdate} patientEmail={patient.email} patientAdress={patient.address}/>
+                  </EditDialog>
+                </div>
                 </TableCell>
               </TableRow>
             ))}
