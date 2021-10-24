@@ -8,11 +8,11 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 5,
     margin: '25px 1px 1px 240px',
     minWidth: 650,
-    maxWidth: 1600
+    maxWidth: '85%'
   },
   tableHeaderCell: {
     fontWeight: 'bold',
-    backgroundColor: '#0288d1',
+    backgroundColor: '#162a3e',
     fontSize: 16
   },
   tablecell: {
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
   info: {
     textAlign: 'center',
-    backgroundColor: '#0288d1',
+    backgroundColor: '#162a3e',
     fontSize: 14,
     color: 'white',
     borderRadius: 5,

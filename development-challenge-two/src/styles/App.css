@@ -27,12 +27,12 @@ button {
 }
 
 .blue-side {
-  background: #0288d1;
+  background: #162a3e;
   width: 210px;
   height: 100vh;
   position: absolute;
   top: 0;
-  z-index: -3;
+  z-index: -5;
 }
 
 button:hover {

@@ -12,7 +12,7 @@ function App() {
           <Route path='/' component={DisplayPatients} />
         </Switch>
       </Router>
-      <section className="blue-side"> _</section>
+      <section className="blue-side">_</section>
     </>
   );
 }

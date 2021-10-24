@@ -8,13 +8,14 @@ import {
   TableHead, 
   TableRow, 
   Paper,
-  Button,
   IconButton 
 } from '@mui/material/';
 
 import { DeleteDialog } from './DeleteDialog';
+import FormDialog from './FormDialog';
+import { CreatePatientForm } from './CreatePatientForm'
 
-import useStyles from './DisplayPatientsStyle';
+import useStyles from '../styles/DisplayPatientsStyle';
 import EditIcon from '@mui/icons-material/Edit';
 
 import { getPatients } from '../services/patients/patients';
@@ -37,13 +38,9 @@ export const DisplayPatients = () => {
     <>
       <div className={classes.wrapper}>
         <h2 className={classes.info}>PATIENTS DATA:</h2>
-        <Button 
-          className={classes.newPatientButton}
-          variant="contained"
-          color="success"
-          >
-          New Patient
-        </Button>
+        <FormDialog>
+          <CreatePatientForm />
+        </FormDialog>
       </div>
       <TableContainer className={classes.tableContainer} component={Paper}>
         <Table className={classes.table} aria-label="simple table">
