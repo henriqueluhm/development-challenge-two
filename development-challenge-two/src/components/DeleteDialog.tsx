@@ -9,18 +9,10 @@ import {
   Button,
   IconButton
 } from '@mui/material/';
-
 import DeleteIcon from '@mui/icons-material/Delete';
 
 import { deletePatient } from '../services/patients/patients';
-
-interface DialogProps {
-  patientId: string;
-  patientName: string;
-  patientBirthdate: string;
-  patientEmail: string;
-  patientAdress: string;
-}
+import { DialogProps } from '../utils/types';
 
 export const DeleteDialog = ({ patientId, patientName, patientBirthdate, patientEmail, patientAdress }: DialogProps)  => {
   const [open, setOpen] = React.useState(false);

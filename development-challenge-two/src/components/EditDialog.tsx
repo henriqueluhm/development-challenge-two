@@ -1,11 +1,12 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
+import EditIcon from '@mui/icons-material/Edit';
+
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
@@ -46,7 +47,7 @@ const BootstrapDialogTitle = (props: DialogTitleProps) => {
   );
 };
 
-export default function FormDialog({children}: any) {
+export default function EditDialog({children}: any) {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -58,9 +59,9 @@ export default function FormDialog({children}: any) {
 
   return (
     <div>
-      <Button variant="contained" color="success" style={{ marginTop: 18, marginRight: 38 }} onClick={handleClickOpen}>
-        New Patient
-      </Button>
+      <IconButton aria-label="edit" size="small" onClick={handleClickOpen}>
+        <EditIcon fontSize="medium" />
+      </IconButton>
       <BootstrapDialog
         aria-labelledby="customized-dialog-title"
         open={open}

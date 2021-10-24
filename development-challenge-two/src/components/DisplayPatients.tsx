@@ -7,16 +7,16 @@ import {
   TableContainer, 
   TableHead, 
   TableRow, 
-  Paper,
-  IconButton 
+  Paper
 } from '@mui/material/';
 
 import { DeleteDialog } from './DeleteDialog';
-import FormDialog from './FormDialog';
+import CreateDialog from './CreateDialog';
 import { CreatePatientForm } from './CreatePatientForm'
+import { EditPatientForm } from './EditPatientForm'
+import EditDialog from './EditDialog';
 
 import useStyles from '../styles/DisplayPatientsStyle';
-import EditIcon from '@mui/icons-material/Edit';
 
 import { getPatients } from '../services/patients/patients';
 import { Patient } from '../utils/types';
@@ -38,9 +38,9 @@ export const DisplayPatients = () => {
     <>
       <div className={classes.wrapper}>
         <h2 className={classes.info}>PATIENTS DATA:</h2>
-        <FormDialog>
+        <CreateDialog>
           <CreatePatientForm />
-        </FormDialog>
+        </CreateDialog>
       </div>
       <TableContainer className={classes.tableContainer} component={Paper}>
         <Table className={classes.table} aria-label="simple table">
@@ -73,11 +73,10 @@ export const DisplayPatients = () => {
                 <TableCell className={classes.tablecell}>{patient.email}</TableCell>
                 <TableCell className={classes.tablecell}>{patient.address}</TableCell>
                 <TableCell align="center">
-
-                <DeleteDialog patientId={patient.id} patientName={patient.name} patientBirthdate={patient.birthdate} patientEmail={patient.email} patientAdress={patient.address}></DeleteDialog>
-                <IconButton aria-label="edit" size="small">
-                  <EditIcon fontSize="medium" />
-                </IconButton>
+                <DeleteDialog patientId={patient.id} patientName={patient.name} patientBirthdate={patient.birthdate} patientEmail={patient.email} patientAdress={patient.address}></DeleteDialog>  
+                <EditDialog>
+                  <EditPatientForm patientId={patient.id} patientName={patient.name} patientBirthdate={patient.birthdate} patientEmail={patient.email} patientAdress={patient.address}/>
+                </EditDialog>
                 </TableCell>
               </TableRow>
             ))}

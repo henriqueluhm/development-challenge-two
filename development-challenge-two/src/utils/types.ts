@@ -11,3 +11,11 @@ export interface SidebarType {
   path: string;
   className: string;
 }
+
+export interface DialogProps {
+  patientId: string;
+  patientName: string;
+  patientBirthdate: string;
+  patientEmail: string;
+  patientAdress: string;
+}
