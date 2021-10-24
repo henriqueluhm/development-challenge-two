@@ -2,10 +2,15 @@ import { Grid, Paper, Button, Typography, TextField } from '@mui/material';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup'
 
+import { generateRandomid } from '../utils/utils';
+import { createPatient } from '../services/patients/patients';
+import { Patient } from '../utils/types';
+
 export const CreatePatientForm = () => {
   const paperStyle = { padding: '15px', width: 350, height: 'auto' };
   const btnStyle = { marginTop: 22 };
 
+  const length = 8;
   const initialValues = {
     name: '',
     birthdate: '',
@@ -21,7 +26,16 @@ export const CreatePatientForm = () => {
   })
 
   const onSubmit = (values: any, props: any) => {
-    alert(JSON.stringify(values));
+    let newPatient: Patient;
+    let newId = generateRandomid(length);
+    newPatient = {
+      id: newId,
+      name: values.name,
+      birthdate: values.birthdate,
+      email: values.email,
+      address: values.address
+    }
+    createPatient(newPatient);
     props.resetForm();
   }
 
