@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 import { 
   Table, 
@@ -12,11 +12,12 @@ import {
   IconButton 
 } from '@mui/material/';
 
+import { DeleteDialog } from './DeleteDialog';
+
 import useStyles from './DisplayPatientsStyle';
 import EditIcon from '@mui/icons-material/Edit';
-import DeleteIcon from '@mui/icons-material/Delete';
 
-import { getPatients, deletePatient } from '../services/patients/patients';
+import { getPatients } from '../services/patients/patients';
 import { Patient } from '../utils/types';
 
 export const DisplayPatients = () => {
@@ -75,11 +76,8 @@ export const DisplayPatients = () => {
                 <TableCell className={classes.tablecell}>{patient.email}</TableCell>
                 <TableCell className={classes.tablecell}>{patient.address}</TableCell>
                 <TableCell align="center">
-                <IconButton aria-label="delete" size="small" onClick={() => {
-                  deletePatient(patient);
-                }}>
-                  <DeleteIcon fontSize="medium" />
-                </IconButton>
+
+                <DeleteDialog patientId={patient.id} patientName={patient.name} patientBirthdate={patient.birthdate} patientEmail={patient.email} patientAdress={patient.address}></DeleteDialog>
                 <IconButton aria-label="edit" size="small">
                   <EditIcon fontSize="medium" />
                 </IconButton>
